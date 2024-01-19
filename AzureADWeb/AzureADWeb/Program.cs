@@ -8,13 +8,22 @@ var builder = WebApplication.CreateBuilder(args);
 //oauthid - https://azureeADLearning.b2clogin.com/azureeADLearning.onmicrosoft.com/<policy-name>/oauth2/v2.0/token
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//calling the add authentication middleware 
 builder.Services.AddAuthentication(options =>
 {
+    //changin the default to cookie auth defaults
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    //seting the default challenge scheme to open id connect default
     options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
 }).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
+//configuring the open id connect
+//addpenidconnect - is a handlerf that will be responsoble for creating the auth request and 
+//manipulating teh handler
+
+//basically the below line will make sure when the authentication is required in app, it will use openidconnectdefault
 .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
 {
+    //signin scheme is cookie auth 
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.Authority = "https://login.microsoftonline.com/3145f25f-fecb-4ea2-b291-7a035ce927d2/v2.0";
     options.ClientId = "e4b72a16-7c0b-449e-b7ee-f7e510c2daab";

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzureADWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+537d89227d77cf5a032ad5de9cabdc7f3a3b7228")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62e422b7d0f34c5925c8c3ae1551ba8aa437309f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzureADWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzureADWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
