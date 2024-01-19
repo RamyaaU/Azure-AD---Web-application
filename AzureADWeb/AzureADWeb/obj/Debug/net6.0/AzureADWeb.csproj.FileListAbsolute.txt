@@ -29,3 +29,12 @@ D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\refint\Azur
 D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\AzureADWeb.pdb
 D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\AzureADWeb.genruntimeconfig.cache
 D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\ref\AzureADWeb.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\AzureADWeb.csproj.AssemblyReference.cache
+D:\Azure-AD---Web-application\AzureADWeb\AzureADWeb\obj\Debug\net6.0\AzureADWeb.csproj.CopyComplete

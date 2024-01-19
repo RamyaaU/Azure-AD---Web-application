@@ -1,9 +1,26 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //application id - 3145f25f-fecb-4ea2-b291-7a035ce927d2
 //oauthid - https://azureeADLearning.b2clogin.com/azureeADLearning.onmicrosoft.com/<policy-name>/oauth2/v2.0/token
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+}).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
+.AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
+{
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.Authority = "https://login.microsoftonline.com/3145f25f-fecb-4ea2-b291-7a035ce927d2/v2.0";
+    options.ClientId = "3145f25f-fecb-4ea2-b291-7a035ce927d2";
+    options.ResponseType = "id_token";
+    options.SaveTokens = true;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,6 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
