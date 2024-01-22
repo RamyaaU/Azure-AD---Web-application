@@ -27,8 +27,10 @@ builder.Services.AddAuthentication(options =>
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.Authority = "https://login.microsoftonline.com/3145f25f-fecb-4ea2-b291-7a035ce927d2/v2.0";
     options.ClientId = "e4b72a16-7c0b-449e-b7ee-f7e510c2daab";
-    options.ResponseType = "id_token";
+    //options.ResponseType = "id_token";
+    options.ResponseType = "code";
     options.SaveTokens = true;
+    options.ClientSecret = "6h68Q~N0VVx7mUeVz-o5xYXS_wiDIhBoI5mZ0c-x";
 });
 
 var app = builder.Build();
