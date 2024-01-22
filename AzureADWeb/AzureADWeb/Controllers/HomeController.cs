@@ -31,8 +31,15 @@ namespace AzureADWeb.Controllers
         public IActionResult SignIn()
         {
             var scheme = OpenIdConnectDefaults.AuthenticationScheme;
+
+            //to specify where the user should be redirected after a successful authentication or authorization process.
+            var redirectURL = Url.ActionContext.HttpContext.Request.Scheme + "://" + Url.ActionContext.HttpContext.Request.Host;
+
             //like teh response status, challenge too returns the value
-            return Challenge(new AuthenticationProperties(), scheme);
+            return Challenge(new AuthenticationProperties
+            {
+                RedirectUri = redirectURL
+            }, scheme);
         }
 
         public IActionResult SignOut()
