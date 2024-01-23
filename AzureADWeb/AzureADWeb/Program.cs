@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 //oauthid - https://azureeADLearning.b2clogin.com/azureeADLearning.onmicrosoft.com/<policy-name>/oauth2/v2.0/token
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
 //calling the add authentication middleware 
 builder.Services.AddAuthentication(options =>
 {

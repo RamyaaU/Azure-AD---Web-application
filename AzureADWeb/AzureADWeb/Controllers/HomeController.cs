@@ -2,19 +2,23 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Net.Http.Headers;
 
 namespace AzureADWeb.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
+            _httpClientFactory = httpClientFactory;
         }
 
         public IActionResult Index()
@@ -67,7 +71,8 @@ namespace AzureADWeb.Controllers
             var client =_httpClientFactory.CreateClient();
         
             //send the request with Get method 
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44301/WeatherForecast");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7159/WeatherForecast");
+            //var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44301/WeatherForecast");
             request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerDefaults.AuthenticationScheme, accessToken);
         
             var response = await client.SendAsync(request);
