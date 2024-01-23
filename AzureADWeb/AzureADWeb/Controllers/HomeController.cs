@@ -56,5 +56,29 @@ namespace AzureADWeb.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
+        public async Task<IActionResult> CallAPI()
+        {
+            //retrieves teh access token from current http context process
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+        
+            //create a client
+            var client =_httpClientFactory.CreateClient();
+        
+            //send the request with Get method 
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44301/WeatherForecast");
+            request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerDefaults.AuthenticationScheme, accessToken);
+        
+            var response = await client.SendAsync(request);
+        
+            if(response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                //some issue
+            }
+        
+            //returns the content of http response 
+            return Content(response.ToString());
+        }
     }
 }
