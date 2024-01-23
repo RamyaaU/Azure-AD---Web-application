@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "2VSLPNLDyJWdyHT3z4qluw1kMBZ1RubQAHpCtcOfyYWiS0QVOe+Q7WLHh28mPvf/uwPPcgWpzGLMxZwJZN8qqw==",
+  "success": true,
+  "projectFilePath": "D:\\Azure-AD---Web-application\\AzureADWeb\\AzureADB2CWeb\\AzureADB2CWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.0\\microsoft.aspnetcore.authentication.openidconnect.6.0.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.10.0\\microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.logging\\6.10.0\\microsoft.identitymodel.logging.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
+    "C:\\Users\\RAMYA\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
