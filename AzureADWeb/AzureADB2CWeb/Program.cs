@@ -23,12 +23,13 @@ builder.Services.AddAuthentication(options =>
 {
     //signin scheme is cookie auth 
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.Authority = "https://login.microsoftonline.com/3145f25f-fecb-4ea2-b291-7a035ce927d2/v2.0";
-    options.ClientId = "e4b72a16-7c0b-449e-b7ee-f7e510c2daab";
+    options.Authority = "https://azureadb2clearnning.b2clogin.com/AzureADB2CLearnning.onmicrosoft.com/B2C_1_SignIn_Up/v2.0";
+    options.ClientId = "fe61dbca-1d21-4dd0-9e42-d8a711947ab9";
     //options.ResponseType = "id_token";
     options.ResponseType = "code";
     options.SaveTokens = true;
-    options.ClientSecret = "6h68Q~N0VVx7mUeVz-o5xYXS_wiDIhBoI5mZ0c-x";
+    options.ClientSecret = "Xy88Q~3d_5rWReMFBBjBhzS0f3UF9W8PdhVwzcLc";
+    options.Scope.Add(options.ClientId);
 });
 
 var app = builder.Build();

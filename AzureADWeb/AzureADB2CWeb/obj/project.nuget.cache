@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2VSLPNLDyJWdyHT3z4qluw1kMBZ1RubQAHpCtcOfyYWiS0QVOe+Q7WLHh28mPvf/uwPPcgWpzGLMxZwJZN8qqw==",
+  "dgSpecHash": "l4mjoDmCN+pUkLfK+BIq2uCuKm8vA4OOja3jwqbbQwE28WDgsLvfvIcf0WLzR7U+ewqFk2R1/PjCvv5k0eztHw==",
   "success": true,
   "projectFilePath": "D:\\Azure-AD---Web-application\\AzureADWeb\\AzureADB2CWeb\\AzureADB2CWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.0\\microsoft.aspnetcore.authentication.openidconnect.6.0.0.nupkg.sha512",
     "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\RAMYA\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.10.0\\microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",

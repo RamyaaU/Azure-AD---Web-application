@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AzureADB2CWeb.props" />
+</Project>
