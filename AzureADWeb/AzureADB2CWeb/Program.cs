@@ -1,11 +1,21 @@
+using Azure.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.Graph;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+
+//configuration for microsoft graph api
+builder.Services.AddSingleton(_=>
+{
+    var cred = new ClientSecretCredential(builder.Configuration["AzureAD:TenantId"], builder.Configuration["AzureAD:ClientId"], builder.Configuration["AzureAD:SecretId"]);
+    return new GraphServiceClient(cred);
+});
+
 //calling the add authentication middleware 
 builder.Services.AddAuthentication(options =>
 {
@@ -49,6 +59,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

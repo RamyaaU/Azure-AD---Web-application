@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using AzureADB2CWeb.Models;
+using System.Text;
+using Microsoft.AspNetCore.Routing.Internal;
+using Microsoft.Graph;
 
 namespace AzureADWeb.Controllers
 {
@@ -14,15 +17,70 @@ namespace AzureADWeb.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly GraphServiceClient _graphServiceClient;
 
-        public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory)
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory,
+            GraphServiceClient graphServiceClient)
         {
             _logger = logger;
             _httpClientFactory = httpClientFactory;
+            _graphServiceClient = graphServiceClient;
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+
+        public async Task<IActionResult> Index()
         {
+            try
+            {
+                // fetch the groups of the user
+                var user = await _graphServiceClient.Users["6ce40d8f-0427-4932-bebe-6d0673ee1d93"].MemberOf.Request().GetAsync();
+                var groupInfoStringBuilder = new StringBuilder();
+
+                foreach (var directoryObject in user.CurrentPage)
+                {
+                    if (directoryObject is Microsoft.Graph.Group group)
+                    {
+                        groupInfoStringBuilder.AppendLine();
+
+                        groupInfoStringBuilder.AppendLine($"Group Name: {group.DisplayName}")
+                                           .AppendLine($"Group ID: {group.Id}");
+
+                        var groupMembers = await _graphServiceClient.Groups[group.Id].Members.Request().GetAsync();
+
+                        if (groupMembers.CurrentPage.Count > 0)
+                        {
+                            groupInfoStringBuilder.AppendLine("Members:");
+
+                            foreach (var member in groupMembers.CurrentPage)
+                            {
+                                if (member is Microsoft.Graph.User groupMember)
+                                {
+                                    string memberDisplayName = groupMember.DisplayName;
+
+                                    groupInfoStringBuilder.AppendLine($" - {memberDisplayName}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            groupInfoStringBuilder.AppendLine("Members: None");
+                        }
+
+                        groupInfoStringBuilder.AppendLine("-----------");
+                    }
+                }
+
+                ViewBag.GroupInfo = groupInfoStringBuilder.ToString().Replace(Environment.NewLine, "<br />");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Error fetching group information: " + ex.Message;
+            }
+
             return View();
         }
 

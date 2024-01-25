@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzureADB2CWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90d9ca00fe3faeec782656c54b9c4764b647b8f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc3d9d46fab4f9ddaebc343810d9ebd7b30afa60")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzureADB2CWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzureADB2CWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

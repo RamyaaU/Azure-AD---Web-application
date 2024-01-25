@@ -39,3 +39,16 @@ D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\obj\Debug\net6.0\refint\A
 D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\obj\Debug\net6.0\AzureADB2CWeb.pdb
 D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\obj\Debug\net6.0\AzureADB2CWeb.genruntimeconfig.cache
 D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\obj\Debug\net6.0\ref\AzureADB2CWeb.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Azure.Core.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Azure.Identity.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.Graph.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.Graph.Core.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\System.Text.Json.dll
+D:\Azure-AD---Web-application\AzureADWeb\AzureADB2CWeb\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
